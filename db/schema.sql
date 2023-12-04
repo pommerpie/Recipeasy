@@ -1,2 +1,21 @@
 DROP DATABASE IF EXISTS recipes_db;
+
 CREATE DATABASE recipes_db;
+
+CREATE TABLE Users (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user VARCHAR NOT NULL,
+    password VARCHAR NOT NULL
+)
+
+CREATE TABLE Recipes (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    rec_name VARCHAR NOT NULL,
+    user_id INT NOT NULL
+)
+
+CREATE TABLE Ingredients (
+    ing_name VARCHAR NOT NULL,
+    rec_id INT NOT NULL
+)
+
