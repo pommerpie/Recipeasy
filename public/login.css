@@ -1,29 +1,46 @@
-/* Add this to your existing CSS or create a new stylesheet */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  nav {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  input {
-    width: 200px; /* Adjust the width as needed */
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+
+  /* Background Image */
+  background-image: url('https://images.unsplash.com/photo-1470549813517-2fa741d25c92?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+#login {
+  background:  rgba(182, 148, 107, 0.7);
+  padding: 30px;
+  border-radius: 2px;
+}
+
+h1, h4 {
+text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input {
+  width: 200px; /* Adjust the width as needed */
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
