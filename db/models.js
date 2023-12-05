@@ -1,7 +1,9 @@
 import { DataTypes, Model } from '@sequelize/core';
 import { Attribute, PrimaryKey, AutoIncrement, NotNull } from '@sequelize/core/decorators-legacy';
 
-export class User extends Model {
+
+//model for the 'Users' table
+export class Users extends Model {
     @Attribute(DataTypes.INTEGER)
     @PrimaryKey
     @AutoIncrement
@@ -16,6 +18,7 @@ export class User extends Model {
     passWord;
   }
 
+//model for the 'Recipes' table
 export class Recipes extends Model {
   @Attribute(DataTypes.INTEGER)
   @PrimaryKey
@@ -31,6 +34,7 @@ export class Recipes extends Model {
   userId;
 }
 
+//model for the 'Ingredients' table
 export class Ingredients extends Model {
   @Attribute(DataTypes.STRING)
   @NotNull
