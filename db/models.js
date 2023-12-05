@@ -8,10 +8,14 @@ export class Users extends Model {
     @PrimaryKey
     @AutoIncrement
     id;
+
+    @Attribute(DataTypes.STRING)
+    @NotNull
+    email;  
   
     @Attribute(DataTypes.STRING)
     @NotNull
-    user;
+    firstName;
   
     @Attribute(DataTypes.STRING)
     @NotNull
