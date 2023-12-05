@@ -1,11 +1,9 @@
-const express = require('express');
+const router = require('express').Router();
 
-const recipeRouter = require('./recipes');
-const ingredientRouter = require('./ingredient')
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
 
-const app = express();
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 
-app.use('/recipies', recipeRouter);
-app.use('/byingredient', ingredientRouter);
-
-module.exports = app;
+module.exports = router;

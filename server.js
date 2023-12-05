@@ -1,4 +1,5 @@
 const path = require('path');
+const routes = require('./routes')
 // Importing express
 const express = require('express');
 // Importing sessions from express
@@ -44,7 +45,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Difering to api route when url is hit
-app.use('/api', api);
+app.use(routes);
 
 // Syncing database and spinning up server
 sequelize.sync({ force: false }).then(() => {
