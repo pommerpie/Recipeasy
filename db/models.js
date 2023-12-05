@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model } from '@sequelize/core';
+import { DataTypes, Model } from '@sequelize/core';
 import { Attribute, PrimaryKey, AutoIncrement, NotNull } from '@sequelize/core/decorators-legacy';
 
 export class User extends Model {
@@ -15,3 +15,29 @@ export class User extends Model {
     @NotNull
     passWord;
   }
+
+  export class Recipes extends Model {
+    @Attribute(DataTypes.INTEGER)
+    @PrimaryKey
+    @AutoIncrement
+    id;
+  
+    @Attribute(DataTypes.STRING)
+    @NotNull
+    recName;
+  
+    @Attribute(DataTypes.INTEGER)
+    @NotNull
+    userId;
+  }
+
+  export class Ingredients extends Model {
+    @Attribute(DataTypes.STRING)
+    @NotNull
+    ingName;
+  
+    @Attribute(DataTypes.INTEGER)
+    @NotNull
+    recId;
+  }
+
