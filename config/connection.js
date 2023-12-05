@@ -1,4 +1,4 @@
-import { Users, Ingredients, Recipes } from '../db/models.js';
+import { Users, Ingredients, Recipes } from '../models/users.js';
 
 const Sequelize = require('sequelize');
 require('dotenv').config();
