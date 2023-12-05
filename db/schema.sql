@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS recipes_db;
+
 CREATE DATABASE recipes_db;
 
 CREATE TABLE Users (
@@ -17,3 +18,4 @@ CREATE TABLE Ingredients (
     ing_name VARCHAR NOT NULL,
     rec_id INT NOT NULL
 )
+
