@@ -49,7 +49,7 @@ nav {
   margin-top: 20px;
 }
 
-button {
+butto {
   padding: 10px 20px;
   font-size: 1em;
   background: linear-gradient(to bottom, #8B4513, #FFD700);
@@ -62,5 +62,5 @@ button {
 }
 
 button:hover {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
 }
