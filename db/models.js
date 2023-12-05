@@ -16,28 +16,28 @@ export class User extends Model {
     passWord;
   }
 
-  export class Recipes extends Model {
-    @Attribute(DataTypes.INTEGER)
-    @PrimaryKey
-    @AutoIncrement
-    id;
-  
-    @Attribute(DataTypes.STRING)
-    @NotNull
-    recName;
-  
-    @Attribute(DataTypes.INTEGER)
-    @NotNull
-    userId;
-  }
+export class Recipes extends Model {
+  @Attribute(DataTypes.INTEGER)
+  @PrimaryKey
+  @AutoIncrement
+  id;
 
-  export class Ingredients extends Model {
-    @Attribute(DataTypes.STRING)
-    @NotNull
-    ingName;
-  
-    @Attribute(DataTypes.INTEGER)
-    @NotNull
-    recId;
-  }
+  @Attribute(DataTypes.STRING)
+  @NotNull
+  recName;
+
+  @Attribute(DataTypes.INTEGER)
+  @NotNull
+  userId;
+}
+
+export class Ingredients extends Model {
+  @Attribute(DataTypes.STRING)
+  @NotNull
+  ingName;
+
+  @Attribute(DataTypes.INTEGER)
+  @NotNull
+  recId;
+}
 
