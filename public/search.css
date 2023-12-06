@@ -1,3 +1,4 @@
+/* main.css */
 
 * {
   margin: 0;
@@ -39,6 +40,7 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  
 }
 
 nav {
@@ -49,7 +51,7 @@ nav {
   margin-top: 20px;
 }
 
-butto {
+button {
   padding: 10px 20px;
   font-size: 1em;
   background: linear-gradient(to bottom, #8B4513, #FFD700);
