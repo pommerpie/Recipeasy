@@ -16,8 +16,10 @@
   </header>
   <main>
     <nav>
-      {{{body}}}
+    {{#if loggedIn}}
     <button id="logoutBtn">Logout</button>
+    {{/if}}
+      {{{body}}}
      </nav>  
   </main>
 </body>
