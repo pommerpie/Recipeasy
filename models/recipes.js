@@ -17,10 +17,6 @@ Recipes.init({
   },
   steps: {
     type: DataTypes.JSON
-  },
-  userID: {
-    type: DataTypes.INTEGER,
-    allowNull: false
   }
 });
 

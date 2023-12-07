@@ -12,7 +12,17 @@ async function showUsers() {
     console.log("All users:", JSON.stringify(users, null, 2));
 }
 
+async function addRecipe(recName, stepsJson, recId, userId) {
+    const recipe = await Recipes.create({ recipeName: `${recName}`, steps: stepsJson });
+    await Users.update({ recipeIds: recId }, {
+        where: {
+          id: userId
+        }
+      });
+}
+
 module.exports = {
     insertUser,
-    showUsers
+    showUsers,
+    addRecipe
 }
