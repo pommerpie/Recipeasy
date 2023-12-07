@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'asoiderv9i298g',
   cookie: {
-    maxAge: 864000 * 15, // Session expires after 15 days
+    maxAge: 86400000 * 15, // Session expires after 15 days
   },
   resave: false,
   saveUninitialized: false,
