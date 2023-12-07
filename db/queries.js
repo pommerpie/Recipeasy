@@ -12,8 +12,6 @@ async function showUsers() {
     console.log("All users:", JSON.stringify(users, null, 2));
 }
 
-insertUser("chris@gmail.com", "chris", "kjdbfkjhfbwe")
-
 module.exports = {
     insertUser,
     showUsers
