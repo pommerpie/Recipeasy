@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Users } = require('../../models')
-
+// Login route
 router.post('/login', async (req, res) => {
     try {
         const dbUserData = await Users.findOne({
@@ -40,6 +40,24 @@ router.post('/login', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
       }
+})
+// Logout route
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+
+router.get('/test', (req, res) => {
+    if(req.session.loggedIn) {
+        res.json('logged in')
+    } else {
+        res.json('logged out')
+    }
 })
 
 
