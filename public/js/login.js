@@ -1,7 +1,7 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    const email = document.getElementById('email').value.trim();
+    const email = document.getElementById('user').value.trim();
     const password = document.getElementById('pass').value.trim();
   
     if (email && password) {
@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        // document.location.replace('/');
+        document.location.replace('/');
         alert('LOGGED IN');
       } else {
         alert('Failed to log in.');
