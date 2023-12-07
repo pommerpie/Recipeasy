@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipeasy</title>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -16,10 +16,12 @@
   </header>
   <main>
     <nav>
-    {{#if loggedIn}}
-    <button id="logoutBtn">Logout</button>
-    {{/if}}
       {{{body}}}
+
+      {{#if loggedIn}}
+      <button id="logoutBtn">Logout</button>
+      {{/if}}
+
      </nav>  
   </main>
 </body>

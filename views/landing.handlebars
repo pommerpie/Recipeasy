@@ -5,57 +5,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipeasy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="landing.css">
 </head>
 
 <body>
   <container id="login">
-    <header>
-      <h4> Please log in to find recipes. </h4>
-    </header>
-    <main>
-        <div class="wrapper">
-          <form class="login_box" id="form">
-            <div class="login-header">
-              <span>Login</span>
-            </div>
+  <main>
+    <nav>
+    <div class="wrapper">
+        <div class="info_box">
 
-            <div class="input_box">
-              <input type="text" id="email" class="input-field" required>
-              <label for="user" class="label">Email</label>
-              <i class="bx bx-user icon"></i>
-            </div>
+          <h2 class="subtitle">Welcome to Recipeasy</h2>
+          
+          <p>Say hello to the ultimate kitchen companion! Are you constantly
+             wondering what you can make with the ingredients you have on hand? Look
+             no further. At Recipeasy, you can find hundreds of delicious and easy-to-make
+             recipes that use ingredients commonly found in most kitchens. Whether you're a
+             seasoned cook or just starting out, this easy-to-use website will be your go-to
+             source for inspiration. Explore our wide range of recipes and start cooking up
+             a storm!</p>
 
-            <div class="input_box">
-              <input type="password" id="pass" class="input-field" required>
-              <label for="pass" class="label">Password</label>
-              <i class="bx bx-lock-alt icon"></i>
-            </div>
 
-            <div class="remember-forgot">
-              <div class="remember-me">
-                <input type="checkbox" id="remember">
-                <label for="remember">Remember me</label>
-              </div>
-
-              <div class="forgot">
-                <a href="#">Forgot password?</a>
-              </div>
+          <div class="btns">
+            <div class="btn">
+               <button class="btn-submit" href="/login">Log In</button>
             </div>
-
-            <div class="input_box">
-              <input type="submit" class="input-submit" value="Login">
-            </div>
-
-            <div class="register">
-              <span>Don't have an account? <a href="#">Register</a></span>
-            </div>
-          </form>
+          </div>
         </div>
-        <script src="./js/login.js"></script>
-    </main>
-  </container>
+      </div>
+  </nav>  
+  </main>
+</container>
 </body>
 
 </html>
