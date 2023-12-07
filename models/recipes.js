@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Recipes extends Model {}
 
-//model for the 'Users' table
+//model for the 'Recipes' table
 Recipes.init({
    id: {
     type: DataTypes.INTEGER,
@@ -15,10 +15,13 @@ Recipes.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
+  steps: {
+    type: DataTypes.JSON
+  },
   userID: {
     type: DataTypes.INTEGER,
     allowNull: false
   }
 });
 
-module.exports = Users;
+module.exports = Recipes;
