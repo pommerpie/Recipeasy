@@ -1,6 +1,7 @@
 const loginBtn = document.getElementById('loginBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const signupBtn = document.getElementById('signup');
+const byIngredient = document.getElementById('byIngredient');
 
 // logic for login
 if (loginBtn) {
@@ -38,4 +39,14 @@ if (signupBtn) {
             document.location.replace('/signup');
         }
     });
+}
+
+//logic for ingredient search 
+if (byIngredient) {
+    byIngredient.addEventListener('click', (e) => {
+        if (e.target === byIngredient) {
+            e.stopImmediatePropagation();
+            console.log("Working")
+        }
+    })
 }
