@@ -11,6 +11,10 @@ Recipe.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     ingredients: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -30,9 +34,10 @@ Recipe.init(
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'recipes',
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'Recipe',
   }
 );
 

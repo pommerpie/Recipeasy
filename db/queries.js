@@ -1,4 +1,5 @@
-const { Users, Recipes }  = require("../models")
+const Users  = require("../models/users")
+const Recipe = require("../models/Recipe")
 const sequelize = require('../config/connection');
 
 async function insertUser(email, name, password) {
@@ -12,14 +13,29 @@ async function showUsers() {
     console.log("All users:", JSON.stringify(users, null, 2));
 }
 
-async function addRecipe(recName, stepsJson, recId, userId) {
-    const recipe = await Recipes.create({ recipeName: `${recName}`, steps: stepsJson });
-    await Users.update({ recipeIds: recId }, {
-        where: {
-          id: userId
-        }
-      });
+async function addRecipe(recName, recIngr, recInstr, recFile, recDesc, userId, recId) {
+    const recipe = await Recipe.create({ 
+        name: `${recName}`,
+        ingredients: `${recIngr}`,
+        instructions: `${recInstr}`,
+        filename: `${recFile}`,
+        description: `${recDesc}`
+        });
+    
+    const recKey = recipe.id
+    const user = await Users.findOne({ where: { id: userId } });
+    let userRecId = user.recipeIds 
+    
+    if (userRecId === null) {
+        user.recipeIds = {recKey: recId}
+    } else {
+        user.recipeIds[recKey] = recId
+    }
+    console.log(user.recipeIds)    
 }
+
+addRecipe("rec", "rec", "rec", "rec", "rec", 3, "5546")
+
 
 module.exports = {
     insertUser,
