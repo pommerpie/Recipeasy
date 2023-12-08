@@ -24,8 +24,12 @@
             source for inspiration. Explore our wide range of recipes and start cooking up
             a storm!</p>
           <div class="btns">
+            {{#if loggedIn}}
+            <button id="logoutBtn" class="btn-submit">Logout</button>
+            {{else}}
             <button id="loginBtn" class="btn-submit">Log In</button>
             <button id="signup" class="btn-submit">Sign Up</button>
+            {{/if}}
           </div>
         </div>
       </div>
