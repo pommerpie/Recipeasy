@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zilla Slab", sans-serif;
+}
+
+:root {
+    --primary-color: #FFD700;
+    --background-color: #ffffff;
+}
+
+body {
+    background-image: url("/img/nadine-primeau--bLkT8wGV0I-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0; 
+}
+
+header {
+    background: linear-gradient(to bottom, #8B4513, var(--primary-color));
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.box-container {
+    background: linear-gradient(to bottom, #8B4513, var(--primary-color));
+    border: 1px solid #8B4513;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #8B4513;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #FFD700;
+}
+
+#tagList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}

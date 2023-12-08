@@ -18,12 +18,18 @@
       <div class="wrapper">
         <form id="form" class="login_box">
           <div class="login-header">
-            <span>Login</span>
+            <span>Signup</span>
           </div>
 
           <div class="input_box">
-            <input type="text" id="user" class="input-field" required>
-            <label for="user" class="label">Username</label>
+            <input type="text" id="first" class="input-field" required>
+            <label for="firstname" class="label">First Name</label>
+            <i class="bx bx-user icon"></i>
+          </div>
+
+          <div class="input_box">
+            <input type="text" id="email" class="input-field" required>
+            <label for="email" class="label">Email</label>
             <i class="bx bx-user icon"></i>
           </div>
 
@@ -33,32 +39,23 @@
             <i class="bx bx-lock-alt icon"></i>
           </div>
 
-          <div class="remember-forgot">
-            <div class="remember-me">
-              <input type="checkbox" id="remember">
-              <label for="remember">Remember me</label>
-            </div>
-
-            <div class="forgot">
-              <a href="#">Forgot password?</a>
-            </div>
-          </div>
-
           <div class="input_box">
-            <input type="submit" class="input-submit" value="Login">
+            <input type="submit" class="input-submit" value="SignUp">
           </div>
 
-          <div class="register">
-            <span>Don't have an account? <a href="/signup">Register</a></span>
+          <div class="login">
+            <span>Already have an account? <a href="/login">Login</a></span>
             <br> 
             <br>
             <a href="/">About us</a>
           </div>
+
+
         </form>
       </div>
     </main>
   </container>
-  <script src="./js/login.js"></script>
+  <script src="./js/signup.js"></script>
 </body>
 
 </html>
