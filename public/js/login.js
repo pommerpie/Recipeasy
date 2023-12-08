@@ -12,8 +12,10 @@ const loginForm = async (event) => {
       });
   
       if (response.ok) {
-        alert('Login success!')
-        document.location.replace('/');
+        await fetch('/', {
+          method: 'GET',
+        });
+        document.location.replace('/')
       } else {
         alert('Failed to log in.');
       }
