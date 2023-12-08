@@ -12,8 +12,8 @@
   <header>
     <h1>Recipeasy</h1>
     <h2>Recipes made easy!</h2>
-    {{#if res.session.loggedIn}}
-      <button id="logoutBtn">Logout</button>
+    {{#if loggedIn}}
+      <button id="logoutBtn" class="btn">Logout</button>
       {{/if}}
   </header>
   <main>
