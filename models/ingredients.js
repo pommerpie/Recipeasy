@@ -8,7 +8,8 @@ Ingredients.init(
     ing_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      unique: true
     },
     name: {
       type: DataTypes.STRING,

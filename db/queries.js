@@ -34,9 +34,6 @@ async function addRecipe(recName, recIngr, recInstr, recFile, recDesc, userId, r
     console.log(user.recipeIds)    
 }
 
-addRecipe("rec", "rec", "rec", "rec", "rec", 3, "5546")
-
-
 module.exports = {
     insertUser,
     showUsers,
