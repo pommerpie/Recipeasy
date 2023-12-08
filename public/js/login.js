@@ -1,4 +1,4 @@
-const loginFormHandler = async (event) => {
+const loginForm = async (event) => {
     event.preventDefault();
   
     const email = document.getElementById('user').value.trim();
@@ -20,4 +20,4 @@ const loginFormHandler = async (event) => {
     }
   };
 
-document.getElementById('form').addEventListener('submit', loginFormHandler);
+document.getElementById('form').addEventListener('submit', loginForm);
