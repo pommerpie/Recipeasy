@@ -30,6 +30,25 @@ router.post('/login', async (req, res) => {
         res.status(500).json(err);
       }
 })
+// Signup route
+router.post('/signup', async (req, res) => {
+  try {
+    const dbUserData = await Users.create({
+      firstName: req.body.firstName,
+      email: req.body.email,
+      password: req.body.password,
+    });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 // Logout route
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
