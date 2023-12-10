@@ -60,14 +60,4 @@ router.post('/logout', (req, res) => {
     }
   });
 
-router.get('/test', (req, res) => {
-    if(req.session.loggedIn) {
-        res.json('logged in')
-    } else {
-        res.json('logged out')
-    }
-})
-
-
-
 module.exports = router;

@@ -11,10 +11,12 @@ data = [
 ]
 
 async function seedData(data) {
+    await sequelize.sync({ force: true });
     for (let i = 0; i < data.length; i++) {
         const user = await Users.create({ email: data[i].email, recipeIds: data[i].recId, firstName: data[i].name, password: data[i].password });
         console.log("Jane's auto-generated ID:", user.id);
     }
 }
+
 seedData(data)
 queries.showUsers()
