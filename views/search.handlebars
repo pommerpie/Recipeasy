@@ -7,16 +7,24 @@
 </head>
 
 <body>
-    <main class="wrapper">
+    <main>
         {{#if loggedIn}}
+        <h1 class="title">Please select your ingredients from the list below</h1>
+        <section class="wrapper" id="options">
         {{#each ingredients}}
-        <label class="container">
+        <label class="container" data-ing_id="{{ing_id}}">
+            
             <input type="checkbox">
             <span class="checkmark">{{name}}</span>
         </label>
         {{/each}}
+        </section>
+        <div>
+            <button class="btn-submit" id="search">Search</button>
+        </div>
         {{else}}
-        <a href="/login">You must login first to view this page</a>
+        <a href="/login" class="title">You must login first to view this page</a>
         {{/if}}
     </main>
+    <script src="./js/search.js"></script>
 </body>
