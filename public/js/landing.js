@@ -2,6 +2,7 @@ const loginBtn = document.getElementById('loginBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const signupBtn = document.getElementById('signup');
 const myrecipesBtn = document.getElementById('myRecipes');
+const searchBtn = document.getElementById('byIngredient');
 
 // logic for login
 if (loginBtn) {
@@ -46,6 +47,15 @@ if (myrecipesBtn) {
         if (e.target === myrecipesBtn) {
             e.stopImmediatePropagation();
             document.location.replace('/myrecipes');
+        }
+    });
+}
+// logic for search button
+if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+        if (e.target === searchBtn) {
+            e.stopImmediatePropagation();
+            document.location.replace('/search');
         }
     });
 }
