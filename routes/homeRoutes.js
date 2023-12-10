@@ -12,4 +12,8 @@ router.get('/signup', async (req, res) => {
     res.render('signup', {loggedIn: req.session.loggedIn});
 });
 
+router.get('/myrecipes', async (req, res) => {
+    res.render('recipe', {loggedIn: req.session.loggedIn})
+})
+
 module.exports = router;

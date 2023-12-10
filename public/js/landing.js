@@ -1,6 +1,7 @@
 const loginBtn = document.getElementById('loginBtn');
 const logoutBtn = document.getElementById('logoutBtn');
 const signupBtn = document.getElementById('signup');
+const myrecipesBtn = document.getElementById('myRecipes');
 
 // logic for login
 if (loginBtn) {
@@ -8,6 +9,15 @@ if (loginBtn) {
         if (e.target === loginBtn) {
             e.stopImmediatePropagation();
             document.location.replace('/login');
+        }
+    });
+}
+// logic for signup
+if (signupBtn) {
+    signupBtn.addEventListener('click', (e) => {
+        if (e.target === signupBtn) {
+            e.stopImmediatePropagation();
+            document.location.replace('/signup');
         }
     });
 }
@@ -30,12 +40,12 @@ if (logoutBtn) {
         }
     });
 }
-// logic for signup
-if (signupBtn) {
-    signupBtn.addEventListener('click', (e) => {
-        if (e.target === signupBtn) {
+// logic for my recipes button
+if (myrecipesBtn) {
+    myrecipesBtn.addEventListener('click', (e) => {
+        if (e.target === myrecipesBtn) {
             e.stopImmediatePropagation();
-            document.location.replace('/signup');
+            document.location.replace('/myrecipes');
         }
     });
 }
