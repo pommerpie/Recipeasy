@@ -13,10 +13,13 @@ const signupForm = async (event) => {
     });
 
     if (response.ok) {
-      const response = await fetch('/api/user/login', {
+      await fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
+      });
+      await fetch('/', {
+        method: 'GET',
       });
       document.location.replace('/');
     } else {
