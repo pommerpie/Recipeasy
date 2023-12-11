@@ -9,13 +9,6 @@
     "handlebars": "^4.7.3",
     "lodash": "^4.17.21",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5",
-    "serve": "^14.2.1",
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "sequelize": "^6.3.5"
   }
 }
