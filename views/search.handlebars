@@ -9,13 +9,14 @@
 <body>
     <main>
         {{#if loggedIn}}
-        <h1 class="title">Here are your recipes!</h1>
+        <h1 class="title">Please select your ingredients from the list below</h1>
         <section class="wrapper" id="options">
-        {{data}}
+        {{#each ingredients}}
         <label class="container">
-            <input type="checkbox" class="checkbox" data-name="">
-            <span class="checkmark"></span>
+            <input type="checkbox" class="checkbox" data-name="{{name}}">
+            <span class="checkmark">{{name}}</span>
         </label>
+        {{/each}}
         </section>
         <div>
             <button class="btn-submit" id="search">Search</button>
@@ -24,5 +25,5 @@
         <a href="/login" class="title">You must login first to view this page</a>
         {{/if}}
     </main>
-    <script src="./js/recipe.js"></script>
+    <script src="./js/search.js"></script>
 </body>

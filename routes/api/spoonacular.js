@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
-router.get('/byIngredient', async (req, res) => {
-    const ingredients = ['milk','cheese','butter', 5062]
-    const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=077448ed5ae54a95a34829c3e60eee0f&ingredients=${ingredients}&ranking=1&ignorePantry=true&number=5`
+router.post('/byIngredient', async (req, res) => {
+    const ingredients = req.body
+    const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${ingredients.join(',+')}&ranking=1&ignorePantry=true&number=5`
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);
@@ -10,8 +10,7 @@ router.get('/byIngredient', async (req, res) => {
 module.exports = router;
 
 router.get('/instructions/:recipeId', async (req, res) => {
-    const recipeId = '640494'
-    const url = `https://api.spoonacular.com/recipes/${req.params.recipeId}/analyzedInstructions?apiKey=077448ed5ae54a95a34829c3e60eee0f`
+    const url = `https://api.spoonacular.com/recipes/${req.params.recipeId}/analyzedInstructions?apiKey=${process.env.API_KEY}`
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);
