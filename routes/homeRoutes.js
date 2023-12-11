@@ -41,3 +41,4 @@ router.get('/results', async (req, res) => {
     const doc = res.render('recipe')
 })
 module.exports = router;
+
