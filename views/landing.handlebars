@@ -1,44 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/landing.css">
+<container id="login">
+  <main>
+    <div class="wrapper">
+      <div class="info_box">
+        <h2 class="subtitle">Welcome to Recipeasy</h2>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipeasy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/landing.css">
-</head>
-
-<body>
-  <container id="login">
-    <main>
-      <div class="wrapper">
-        <div class="info_box">
-          <h2 class="subtitle">Welcome to Recipeasy</h2>
-
-          <p>Say hello to the ultimate kitchen companion! Are you constantly
-            wondering what you can make with the ingredients you have on hand? Look
-            no further. At Recipeasy, you can find hundreds of delicious and easy-to-make
-            recipes that use ingredients commonly found in most kitchens. Whether you're a
-            seasoned cook or just starting out, this easy-to-use website will be your go-to
-            source for inspiration. Explore our wide range of recipes and start cooking up
-            a storm!</p>
-          <div class="btns">
-            {{#if loggedIn}}
-            <button id="byIngredient" class="btn-submit">Search by Ingredients</button>
-            <button id="myRecipes" class="btn-submit">My Recipes</button>
-            <button id="logoutBtn" class="btn-submit">Logout</button>
-            {{else}}
-            <button id="loginBtn" class="btn-submit">Log In</button>
-            <button id="signup" class="btn-submit">Sign Up</button>
-            {{/if}}
-          </div>
+        <p>Say hello to the ultimate kitchen companion! Are you constantly
+          wondering what you can make with the ingredients you have on hand? Look
+          no further. At Recipeasy, you can find hundreds of delicious and easy-to-make
+          recipes that use ingredients commonly found in most kitchens. Whether you're a
+          seasoned cook or just starting out, this easy-to-use website will be your go-to
+          source for inspiration. Explore our wide range of recipes and start cooking up
+          a storm!</p>
+        <div class="btns">
+          {{#if loggedIn}}
+          <button id="byIngredient" class="btn-submit">Search by Ingredients</button>
+          <button id="myRecipes" class="btn-submit">My Recipes</button>
+          <button id="logoutBtn" class="btn-submit">Logout</button>
+          {{else}}
+          <button id="loginBtn" class="btn-submit">Log In</button>
+          <button id="signup" class="btn-submit">Sign Up</button>
+          {{/if}}
         </div>
       </div>
-      </div>
-    </main>
-  </container>
-  <script src="./js/landing.js"></script>
-</body>
-
-</html>
+    </div>
+    </div>
+  </main>
+</container>
+<script src="./js/landing.js"></script>
