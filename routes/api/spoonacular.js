@@ -5,7 +5,7 @@ router.post('/byIngredient', async (req, res) => {
     const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${ingredients.join(',+')}&ranking=1&ignorePantry=true&number=5`
     const response = await fetch(url);
     const data = await response.json();
-    res.json(data);
+    res.send(data)
 })
 module.exports = router;
 
