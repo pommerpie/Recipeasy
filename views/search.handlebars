@@ -12,9 +12,8 @@
         <h1 class="title">Please select your ingredients from the list below</h1>
         <section class="wrapper" id="options">
         {{#each ingredients}}
-        <label class="container" data-ing_id="{{ing_id}}">
-            
-            <input type="checkbox">
+        <label class="container">
+            <input type="checkbox" class="checkbox" data-name="{{name}}">
             <span class="checkmark">{{name}}</span>
         </label>
         {{/each}}

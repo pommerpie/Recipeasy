@@ -37,4 +37,7 @@ router.get('/search', async (req, res) => {
     }
 })
 
+router.get('/results', async (req, res) => {
+    const doc = res.render('recipe')
+})
 module.exports = router;

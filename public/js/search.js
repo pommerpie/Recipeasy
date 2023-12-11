@@ -1,7 +1,21 @@
 const searchBtn = document.getElementById('search');
-const ingredientList = document.getElementById('options')
+const ingredientList = document.getElementsByClassName('checkbox')
 
-searchBtn.addEventListener('click', (e) => {
+searchBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    document.location.replace('/')
+    const selectedIngredients = [];
+    for (let i in ingredientList) {
+        if (ingredientList[i].checked) {
+            selectedIngredients.push(ingredientList[i].dataset.name);
+        };
+    };
+    const response = await fetch('/api/spoonacular/byIngredient', {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(selectedIngredients),
+    });
+    const data = await response.json();
+    document.location.replace('/results')
 })

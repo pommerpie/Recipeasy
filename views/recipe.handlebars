@@ -1,59 +1,28 @@
-<section class="container">
-    <h3 class="recipe-name">{{recipe.name}}</h3>
-    
-</section>
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search Results</title>
+    <title>Recipeasy</title>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/results.css">
+    <link rel="stylesheet" type="text/css" href="./css/search.css">
 </head>
+
 <body>
     <main>
-        <div class="recipe">
-            <img src="/Results/css/Bologneseplatedside.jpg" alt="Spaghetti Bolognese">
-            <div class="recipe-details">
-                <h2>Spaghetti Bolognese</h2>
-                <p>A classic Italian dish with savory meat sauce served over pasta.</p>
-            </div>
+        {{#if loggedIn}}
+        <h1 class="title">Here are your recipes!</h1>
+        <section class="wrapper" id="options">
+        {{data}}
+        <label class="container">
+            <input type="checkbox" class="checkbox" data-name="">
+            <span class="checkmark"></span>
+        </label>
+        </section>
+        <div>
+            <button class="btn-submit" id="search">Search</button>
         </div>
-
-        <div class="recipe">
-            <img src="/Results/css/Chicken-Alfredo-bowl.jpg" alt="Chicken Alfredo">
-            <div class="recipe-details">
-                <h2>Chicken Alfredo</h2>
-                <p>Creamy Alfredo sauce paired with tender chicken and fettuccine pasta.</p>
-            </div>
-        </div>
-
-        <div class="recipe">
-            <img src="/Results/css/Chicken-Alfredo-bowl.jpg" alt="Chicken Alfredo">
-            <div class="recipe-details">
-                <h2>Chicken Alfredo</h2>
-                <p>Creamy Alfredo sauce paired with tender chicken and fettuccine pasta.</p>
-            </div>
-        </div>
-
-        <div class="recipe">
-            <img src="/Results/css/Chicken-Alfredo-bowl.jpg" alt="Chicken Alfredo">
-            <div class="recipe-details">
-                <h2>Chicken Alfredo</h2>
-                <p>Creamy Alfredo sauce paired with tender chicken and fettuccine pasta.</p>
-            </div>
-        </div>
-
-        <div class="recipe">
-            <img src="/Results/css/Chicken-Alfredo-bowl.jpg" alt="Chicken Alfredo">
-            <div class="recipe-details">
-                <h2>Chicken Alfredo</h2>
-                <p>Creamy Alfredo sauce paired with tender chicken and fettuccine pasta.</p>
-            </div>
-        </div>
-
+        {{else}}
+        <a href="/login" class="title">You must login first to view this page</a>
+        {{/if}}
     </main>
+    <script src="./js/recipe.js"></script>
 </body>
-</html>
