@@ -16,15 +16,9 @@ Users.init({
     primaryKey: true,
     autoIncrement: true
   },
-<<<<<<< HEAD
-  //recipeIds: {
-    //type: DataTypes.JSON
-  //},
-=======
   // recipeIds: {
   //   type: DataTypes.JSON
   // },
->>>>>>> c4d105cbeb53838d65fc11892f795bca2f238cb9
   email: {
     type: DataTypes.STRING,
     allowNull: false,

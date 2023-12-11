@@ -17,5 +17,5 @@ searchBtn.addEventListener('click', async (e) => {
         body: JSON.stringify(selectedIngredients),
     });
     const data = await response.json();
-    document.location.replace('/results')
+    console.log(data)
 })

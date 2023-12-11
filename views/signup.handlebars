@@ -1,58 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+<container id="login">
+  <main>
+    <div class="wrapper">
+      <form id="form" class="login_box">
+        <div class="login-header">
+          <span>Signup</span>
+        </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipeasy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/login.css">
-</head>
+        <div class="input_box">
+          <input type="text" id="first" class="input-field" required>
+          <label for="firstname" class="label">First Name</label>
+          <i class="bx bx-user icon"></i>
+        </div>
 
-<body>
-  <container id="login">
-    <main>
-      <div class="wrapper">
-        <form id="form" class="login_box">
-          <div class="login-header">
-            <span>Signup</span>
-          </div>
+        <div class="input_box">
+          <input type="text" id="email" class="input-field" required>
+          <label for="email" class="label">Email</label>
+          <i class="bx bx-user icon"></i>
+        </div>
 
-          <div class="input_box">
-            <input type="text" id="first" class="input-field" required>
-            <label for="firstname" class="label">First Name</label>
-            <i class="bx bx-user icon"></i>
-          </div>
+        <div class="input_box">
+          <input type="password" id="pass" class="input-field" required>
+          <label for="pass" class="label">Password</label>
+          <i class="bx bx-lock-alt icon"></i>
+        </div>
 
-          <div class="input_box">
-            <input type="text" id="email" class="input-field" required>
-            <label for="email" class="label">Email</label>
-            <i class="bx bx-user icon"></i>
-          </div>
+        <div class="input_box">
+          <input type="submit" class="input-submit" value="SignUp">
+        </div>
 
-          <div class="input_box">
-            <input type="password" id="pass" class="input-field" required>
-            <label for="pass" class="label">Password</label>
-            <i class="bx bx-lock-alt icon"></i>
-          </div>
-
-          <div class="input_box">
-            <input type="submit" class="input-submit" value="Sign Up">
-          </div>
-
-          <div class="login">
-            <span>Already have an account? <a href="/login">Login</a></span>
-            <br> 
-            <br>
-            <a href="/">About us</a>
-          </div>
+        <div class="login">
+          <span>Already have an account? <a href="/login">Login</a></span>
+          <br>
+          <br>
+          <a href="/">About us</a>
+        </div>
 
 
-        </form>
-      </div>
-    </main>
-  </container>
-  <script src="./js/signup.js"></script>
-</body>
-
-</html>
+      </form>
+    </div>
+  </main>
+</container>
+<script src="./js/signup.js"></script>
