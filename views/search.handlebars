@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="./css/search.css">
 <main>
     {{#if loggedIn}}
-    <h1 class="title">Please select your ingredients from the list below</h1>
+    <h1 class="title">Please select your ingredients from the list below {{userID}}</h1>
     <section class="wrapper" id="options">
         {{#each ingredients}}
         <label class="container">

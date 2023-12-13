@@ -29,7 +29,8 @@ router.get('/search', async (req, res) => {
         );
         res.render('search', {
             ingredients,
-            loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn,
+            userID: req.session.userID
         });
     } catch (err) {
         console.log(err);
@@ -37,7 +38,4 @@ router.get('/search', async (req, res) => {
     }
 })
 
-router.get('/results', async (req, res) => {
-    const doc = res.render('recipe')
-})
 module.exports = router;
