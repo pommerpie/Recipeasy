@@ -16,9 +16,6 @@ Users.init({
     primaryKey: true,
     autoIncrement: true
   },
-  // recipeIds: {
-  //   type: DataTypes.JSON
-  // },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -37,6 +34,10 @@ Users.init({
     validate: {
       len: [8],
     },
+  },
+  recentSearch: {
+    type: DataTypes.JSON,
+    allowNull: true
   }
 }, {
   hooks: {
