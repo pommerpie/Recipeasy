@@ -45,6 +45,7 @@ router.get('/byIngredient/:ingredients', async (req, res) => {
     const data = await response.json();
     res.render('recipe', { loggedIn: req.session.loggedIn, data: data, style: "../css/search.css", script: "../js/recipe.js" });
 })
+
 // getting recipe instuctions based on id
 router.get('/instructions/:recipeId', async (req, res) => {
     const url =`https://api.spoonacular.com/recipes/${req.params.recipeId}/summary?apiKey=${process.env.API_KEY}`
