@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{style}}">
+<main>
+    {{#if loggedIn}}
+    <h1 class="title">{{summary.title}}</h1>
+    <div class="description">
+        <p>{{{summary.summary}}}</p>
+        <ol>
+            {{#each instructions}}
+            <li>{{step}}</li>
+            {{/each}}
+        </ol>
+    </div>
+    {{else}}
+    <a href="/login" class="title">You must login first to view this page</a>
+    {{/if}}
+</main>
+<script src="{{script}}"></script>

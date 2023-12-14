@@ -41,6 +41,11 @@ a {
     color: var(--second-color);
 }
 
+li {
+    margin: 10px;
+    color: aquamarine;
+}
+
 .info_box {
     position: relative;
     width: 400px;
@@ -52,6 +57,20 @@ a {
     backdrop-filter: blur(25px);
     margin: 10px;
     text-align: center;
+}
+
+.description {
+    position: relative;
+    width: 70%;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 2em 2.5em 2em 2.5em;
+    color: var(--second-color);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px);
+    margin: 10px;
+    text-align: center;
+    font-size: 22px;
 }
 
 .wrapper {
