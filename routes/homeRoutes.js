@@ -37,5 +37,14 @@ router.get('/search', async (req, res) => {
         res.status(500).json(err);
     }
 })
-
+router.get('/recipes', async (req,res) => {
+    
+})
+router.get('/byIngredient/:ingredients', async (req, res) => {
+    let ingredients = req.params.ingredients
+    const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${ingredients}&ranking=1&ignorePantry=true&number=5`
+    const response = await fetch(url);
+    const data = await response.json();
+    res.render('recipe', { loggedIn: req.session.loggedIn, data: data, style: "../css/search.css", script: "../js/recipe.js" });
+})
 module.exports = router;
