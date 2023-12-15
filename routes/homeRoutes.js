@@ -55,7 +55,6 @@ router.get('/instructions/:recipeId', async (req, res) => {
     const response2 = await fetch(url2);
     const data = await response2.json();
     const instructions = data[0].steps
-    console.log(instructions)
     res.render('singleRecipe', { loggedIn: req.session.loggedIn, summary, instructions, style: "../css/search.css", script: "" });
 })
 

@@ -12,6 +12,22 @@ data = [
     {name: 'Corn', ing_id: 11168},
     {name: 'Cooked pasta', ing_id: 20421},
     {name: 'Flour tortillas', ing_id: 10218364},
+    {name: 'Potatoes', ing_id: 11362},
+    {name: 'Lettuce', ing_id: 11252},
+    {name: 'Bacon', ing_id: 10123},
+    {name: 'Carrots', ing_id: 11124},
+    {name: 'Onion', ing_id: 11282},
+    {name: 'Ground beef', ing_id: 10023572},
+    {name: 'Tomatoes', ing_id: 11529},
+    {name: 'Bell pepper', ing_id: 10211821},
+    {name: 'Beans', ing_id: 16069},
+    {name: 'Garlic', ing_id: 11215},
+    {name: 'Free range eggs', ing_id: 1123},
+    {name: 'Taco seasoning mix', ing_id: 2073},
+    {name: 'Ranch dressing', ing_id: 4639},
+    {name: 'BBQ sauce', ing_id: 6150},
+    {name: 'Ketchup', ing_id: 11935},
+    {name: 'Garlic salt', ing_id: 1062047},
 ]
 
 const seedIngredients = () => Ingredidents.bulkCreate(data);
